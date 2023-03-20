@@ -22,6 +22,7 @@ area_enclosed = area_a - area_b
 # Display the area enclosed by the two circles
 if radius_a > radius_b:
     print(f"The area enclosed by the two circles is: {area_enclosed:.2f} sq. units")
-
+else:
+    print("radius a should be greater than radius b")
 
 

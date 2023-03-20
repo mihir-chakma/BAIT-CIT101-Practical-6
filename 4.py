@@ -11,7 +11,8 @@ employee and display the pay slip containing the required information in an acce
 # Salary bonuses:
 # male = 5%
 # female = 8%
-# all employees = 2% - if under 25,000 salary 
+
+# all employees = 2% - whose salaries under 25,000 
 
 
 emp_no = int(input("Enter employee number: "))
@@ -24,10 +25,11 @@ if emp_sex == 'M' or emp_sex == "Male":
     bonus = emp_salary * 0.05 # 0.05 = 5%
 elif emp_sex == 'F' or emp_sex == "Female":
     bonus = emp_salary * 0.08 # 0.08 = 8%
-
+    
 # Apply additional bonus if salary is not greater than Rs. 25,000
-if emp_salary <= 25000:
-    bonus += emp_salary * 0.02 # 0.02 = 2%
+if emp_salary < 25000:
+    # bonus += emp_salary * 0.02 # 0.02 = 2%
+    bonus = bonus + emp_salary * 0.02
 
 # Calculate total pay
 total_pay = emp_salary + bonus
