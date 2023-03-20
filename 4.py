@@ -17,18 +17,17 @@ employee and display the pay slip containing the required information in an acce
 emp_no = int(input("Enter employee number: "))
 emp_name = input("Enter employee name: ").capitalize()
 emp_salary = float(input("Enter employee salary: "))
-emp_sex = input("Enter employee sex (M/F): ").upper()
+emp_sex = input("Enter employee sex (M/F): ").capitalize()
 
 # Calculate bonus
-if emp_sex == 'M':
+if emp_sex == 'M' or emp_sex == "Male":
     bonus = emp_salary * 0.05 # 0.05 = 5%
-elif emp_sex == 'F':
+elif emp_sex == 'F' or emp_sex == "Female":
     bonus = emp_salary * 0.08 # 0.08 = 8%
 
 # Apply additional bonus if salary is not greater than Rs. 25,000
 if emp_salary <= 25000:
-    bonus = bonus + emp_salary * 0.02 # 0.02 = 2%
-    # bonus += emp_salary * 0.02 # in shorthand 
+    bonus += emp_salary * 0.02 # 0.02 = 2%
 
 # Calculate total pay
 total_pay = emp_salary + bonus
@@ -37,35 +36,6 @@ total_pay = emp_salary + bonus
 print("\n_____Employee Pay Slip_____")
 print(f"Employee Number : {emp_no}")
 print(f"Employee Name : {emp_name}")
-print(f"Employee Salary is : {emp_salary}, Bonus is {bonus} and Total pay is {total_pay}")
+print(f"Employee Salary is {emp_salary}, Bonus is {bonus} and Total payment is: {total_pay:.2f}")
 print(f"Employee Sex : {emp_sex}")
 
-
-
-
-
-
-########################################################################
-
-# gender = input("Gender: ")
-# salary =float(input("Salary: "))
-# # bonus = float(input("Bonus: "))
-
-# if gender == 'M' or gender == 'm':
-#     if salary > 25000:
-#         bonus = float(salary * 0.05) # 0.05 = 5%
-#     else:
-#         bonus = float(salary * 0.02) # 0.02 = 2%
-
-# if gender == 'F' or gender == 'f':
-#     if salary > 25000:
-#         bonus = float(salary * 0.08) # 0.05 = 8%, 0.1 = 10% 
-#     else:
-#         bonus = float(salary * 0.02) # 0.02 = 2%
-
-# salary += bonus
-# print(salary, bonus)
-
-
-
-########################################################################

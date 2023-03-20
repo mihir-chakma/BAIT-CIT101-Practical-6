@@ -2,19 +2,20 @@
 Write a program to enter the length L (in meters) of a simple pendulum and find its period (T in seconds) 
 assuming that the gravitational acceleration is 9.834 m/s-2. 
 
-Hint: Use the formula T = 2sqrt(L/g)
+Hint: Use the formula T = 2pisqrt(L/g) 
+
 (PToC = 5 minutes)
 
 '''
 
-import math
+from math import pi, sqrt
 
 # Input the length of the simple pendulum
 length = float(input("Enter the length of the pendulum (in meters): "))
 
 # Calculate the period of the simple pendulum
 g = 9.834 # acceleration due to gravity in m/s^2
-period = 2 * math.pi * math.sqrt(length / g)
+period = 2 * pi * sqrt(length / g)
 
 # Display the period of the simple pendulum
 print("The period of the pendulum is: {:.2f} seconds".format(period))

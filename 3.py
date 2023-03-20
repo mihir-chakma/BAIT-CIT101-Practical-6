@@ -9,25 +9,33 @@ num1 = int(input("Enter the first number: "))
 num2 = int(input("Enter the second number: "))
 num3 = int(input("Enter the third number: "))
 
-valid_number = 0 < num1 < num2 < num3
+valid_number = num1 > 0
 
-if not valid_number:
+if not num1:
     print("Invalid input! Please enter a valid number.")
     sys.exit()
 
-largest = num1 
+valid_number = num2 > 0
 
-if num2 > largest:
+if not num2:
+    print("Invalid input! Please enter a valid number.")
+    sys.exit()
+
+valid_number = num3 > 0
+
+if not num3:
+    print("Invalid input! Please enter a valid number.")
+    sys.exit()
+
+
+if num1 >= num2 and num1 >= num3:
+    largest = num1
+elif num2 >= num1 and num2 >= num3:
     largest = num2
-if num3 > largest:
+else:
     largest = num3
 
-print(f"The largest of the three numbers is {largest}")
+
+print(f"The largest number is : {largest}")
 
 
-# if num1 >= num2 and num1 >= num3:
-#     largest = num1
-# elif num2 >= num1 and num2 >= num3:
-#     largest = num2
-# else:
-#     largest = num3

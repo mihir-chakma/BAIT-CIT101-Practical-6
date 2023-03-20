@@ -16,38 +16,29 @@ import sys
 
 # Input candidate details
 candidate_name = input("Enter candidate name: ").capitalize()
-marks_obtained = float(input("Enter marks obtained (out of 100): "))
+marks = int(input("Enter marks obtained (out of 100): "))
 
 # Validate marks input
-if not marks_obtained < 0 or marks_obtained > 100:
+if not marks > 0:
     print("Error: Marks should be between 0 and 100.")
     sys.exit()
 
 # Determine grade based on marks obtained
-if marks_obtained < 40:
+if 0 <= marks < 40:
     grade = 'F'
-elif marks_obtained < 55:
+elif 40 <= marks < 55:
     grade = 'S'
-elif marks_obtained < 65:
+elif 55 <= marks < 65:
     grade = 'C'
-elif marks_obtained < 75:
+elif 65 <= marks < 75:
     grade = 'B'
-else:
+elif 75 <= marks <= 100:
     grade = 'A'
 
 # Display candidate details and grade obtained
-print("Candidate Name:", candidate_name)
-print("Marks Obtained:", marks_obtained)
-print("Grade:", grade)
+print(f"Candidate Name: {candidate_name}")
+print(f"Marks Obtained: {marks}")
+print(f"Grade: {grade}")
 
 
-# import sys
-# name = input("Enter your name : ")
-# marks = int(input("Enter marks : "))
-# invalid = 0 < marks
-# if not invalid:
-#     print("Invalid input! Please enter a valid number.")
-#     sys.exit()
-# if 100 <= marks and  75 >= marks:
-#     result = "A"
-# print(result)
+
