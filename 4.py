@@ -35,9 +35,9 @@ if emp_salary < 25000:
 total_pay = emp_salary + bonus
 
 # display the pay slip
-print("\n_____Employee Pay Slip_____")
+print(f"\n___Employee Pay Slip___")
 print(f"Employee Number : {emp_no}")
-print(f"Employee Name : {emp_name}")
+print(f"Employee Name   : {emp_name}")
 print(f"Employee Salary is {emp_salary}, Bonus is {bonus} and Total payment is: {total_pay:.2f}")
-print(f"Employee Sex : {emp_sex}")
+print(f"Employee Sex    : {emp_sex}")
 
